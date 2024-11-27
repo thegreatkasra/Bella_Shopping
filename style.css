@@ -1,0 +1,676 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+  background-color: #E8E8E8;
+  overflow-x: hidden; 
+}
+
+
+/* Header Styling */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0); 
+  z-index: 10; 
+}
+
+/* Announcement Bar */
+
+header .note span {
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: #f9f9f9;
+  background: #000;
+  padding: 4px;
+}
+
+/* Navigation Styling */
+
+header .banner .nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: transparent;
+}
+
+header .banner .nav .pages .menu{
+  display: none;
+}
+
+header .banner .nav .pages ul {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+}
+
+header .banner .nav .pages ul li a {
+  text-decoration: none;
+  color: #000;
+  transition: 0.3s ease;
+}
+
+header .banner .nav .pages ul li a:hover {
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* Logo Styling */
+
+.logo a {
+  font-size: 48px;
+  font-weight: 600;
+  color: #000;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 3px;
+}
+
+/* Buttons */
+
+header .banner .nav .buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+header .banner .nav .buttons .lan {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #000;
+  padding: 4px 8px;
+}
+
+/* Hero Section */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  padding-top: 80px; 
+}
+
+.hero-image-mobile{
+  display: none;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1; 
+}
+
+.hero-content {
+  position: absolute;
+  color: #333;
+  font-size: 24px;
+  top: 350px;
+  left: 120px;
+}
+
+.hero-content p{
+  font-family: "Viaoda Libre", serif;
+  font-weight: 200;
+  letter-spacing: 5px;
+}
+
+.hero-content h1 {
+  font-family: "Viaoda Libre", serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 5px;
+  font-size: 48px;
+  margin: 16px 0;
+}
+
+.hero-content .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #333;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.hero-content .btn:hover {
+  background-color: #000;
+}
+
+
+/* Best Seller */
+
+.best_seller{
+  margin: 120px 80px;
+}
+
+.topic{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topic p{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.topic div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.cards{
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  margin-top: 32px;
+}
+.cards::-webkit-scrollbar{
+  display: none;
+}
+
+.cards .card{
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  width: 25%;
+  margin-right: 12px;
+}
+
+.cards .card .info{
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  padding-top: 4px;
+}
+
+.cards .card .info span{
+  margin-top: 4px;
+}
+
+.cards .card .info .text{
+  font-weight: 600;
+}
+
+.card .pic img{
+  cursor: pointer;
+  border-radius: 4px;
+  width: 240px
+}
+
+/* feature article */
+
+.feature {
+  margin: 120px 80px;
+}
+
+.brand{
+  width: 100%;
+  display: flex;
+  justify-content:center;
+  margin: 42px 40px;
+  overflow: hidden;
+  flex-direction: row;
+}
+
+
+
+.brand .leftContent{
+  width: 60%;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  gap:32px;
+}
+
+.brand .leftContent h1{
+  font-size: 20px;
+  font-weight: 600;
+}
+.brand .leftContent h2{
+  font-family: "Viaoda Libre", serif;
+  font-weight: 400;
+  font-size: 36px;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+.brand .leftContent p{
+  font-size: 16px;
+}
+.brand .leftContent .read{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 16px 0;
+}
+.brand .leftContent a{
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+}
+.brand .rightContent{
+  width: 40%;
+  margin: 0 40px;
+}
+.brand .images{
+  width: 100%;
+}
+
+/* collections */
+
+.collections{
+  margin: 120px 80px;
+
+}
+.cards_wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  width: 100%;
+  margin-top: 32px;
+  padding: 0 40;
+}
+
+/* ---------------- */
+section hr{
+  height: 3px;
+  background-color: #00000065;
+}
+
+/* FOOTER */
+
+footer{
+  width: 100%;
+  margin: 12px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+footer .footerNav{
+  display: flex;
+  
+}
+
+footer .footerNav ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 16px;
+}
+
+footer .footerNav ul li{
+  padding: 4px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+footer .footerNav ul li h1{
+  font-size: 18px;
+}
+
+.subscribe{
+  margin: 0 80px 0 0;
+}
+.subscribe h1{
+  font-size: 20px;
+  color: #333;
+  padding: 8px 0;
+}
+.subscribe input{
+margin: 8px 0;
+padding: 1% 6%;
+width: 80%;
+background-color: #00000000;
+border: none;
+border-bottom: #000 2px solid;
+}
+
+.subscribe input:focus{
+  outline: none;
+  border: none;
+  border-bottom: #0b7a10 2px solid;
+  }
+.subscribe p{
+  font-size: 12px;
+  color: #333;
+}
+/* --------------------------------------- */
+.copyright span{
+  font-size: 10px;
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 0 24px;
+}
+
+
+
+/* ---------------------------------- account page */
+
+.account{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+section .left_container{
+  width: 50%;
+}
+section .left_container img{
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+}
+section .right_container{
+  width:50%;
+  margin-top: 150px;
+  padding: 0 24px; 
+  
+}
+.right_container .signin{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.signin h2,input,button{
+  display: flex;
+  justify-content: center;
+  margin:10px;
+  padding: 8px;
+}
+.signin h2{
+  margin-bottom: 50px;
+}
+.signin input,button{
+  border-radius: 3px;
+  border: 1.5px solid #6f6f6f;
+}
+.signin input{
+  background-color: #33333300;
+}
+.signin input:focus{
+  border: 3px solid;
+}
+.signin button{
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.signin button:hover{
+  background: #000;
+  color: #E8E8E8;
+}
+.signin label{
+  font-size: 12px;
+  color: #6f6f6f;
+  margin: 0 0 16px 16px;
+}
+.remmember{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 12px;
+}
+.remmember input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.remmember .checkbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.remmember .checkbox label{
+  margin-left: 0;
+}
+.forgot-password-link{
+  text-decoration: none;
+  color: #000;
+  font-size: 12px;
+}
+.apple_btn{
+  background: #000;
+  gap: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+.apple_btn span{
+  color: #E8E8E8;
+  font-size: 16px;
+}
+.or{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin: 60px 0;
+}
+.or span{
+  font-size: 14px;
+  font-weight: 600;
+}
+.or hr{
+  width: 40%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive */
+
+@media (max-width:940px) {
+.brand{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+  }
+  .brand .rightContent{
+    width: 100%;
+    order: 2;
+  }
+  .brand .leftContent{
+    width: 100%;
+    order: 1;
+  }
+
+  .topic{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 0 24px;
+  }
+  .topic div{
+    display: none;
+  }
+  header .banner .nav{
+    display: flex;
+    justify-content: space-between;
+  }
+  header .banner .logo{
+    display: none;
+  }
+  header .banner .nav .pages .menu{
+    display: block;
+    scale: 0.5;
+  }
+  header .banner .nav .pages ul {
+    display: none;
+  }
+
+  header .banner .nav .buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+/* -------------------------- */ 
+.hero-content {
+  padding: 16px;
+  background: #e1e1e1bc;
+  border-radius: 6px;
+  top: 350px;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* -------------------------- */ 
+  .best_seller{
+    margin: 40px 24px;
+  }
+  .topic div{
+    gap: 8px;
+  }
+  .cards{
+    gap: 12px;
+    margin-top: 24px;
+  }
+  .cards .card{
+    width: auto;
+  }
+  .cards .card .pic img{
+    width: 160px;
+  }
+  /* -------------------------- */ 
+  .feature {
+    margin: 80px 24px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .brand .leftContent{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap:20px;
+  }
+  .brand .rightContent{
+    width: 100%;
+    opacity: 10%;
+    margin: 0 20px;
+  }
+  /* -------------------------- */ 
+  .hero-image{
+    display: none;
+  }
+  .hero-image-mobile{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1; 
+  }
+  /* ---------------------------- */
+  footer{
+    width: 100%;
+    margin: 12px 12px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    gap: 40px;
+  }
+
+  .subscribe{
+    margin: 0 0 0 0;
+  }
+}
+
+@media (max-width:680px) {
+  .collections{
+    margin: 12px 24px 80px;
+  }
+  .collections .cards_wrap .card img{
+    width: 150px;
+  }
+  footer .footerNav ul li{
+    padding: 4px 0;
+    font-size: 10px;
+    color: #333;
+  }
+  header .banner .logo{
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 150px;
+  }
+  header .logo a {
+    color: #d7d7d7;
+  }
+}

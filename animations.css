@@ -1,0 +1,81 @@
+/* animation */
+
+  
+  @keyframes text-blur {
+    0% {
+      filter: blur(0);
+      opacity: 1;
+    }
+    100% {
+      filter: blur(2px);
+      opacity: 0.7;
+    }
+  }
+
+  /* logo */
+
+  header .banner .nav .logo a:hover {
+    animation: text-blur 5s ease 0s forwards ;
+  }
+
+
+
+  @keyframes fade-in {
+    from{scale: 0.5 ; opacity: 0;}
+    to{scale:1 ; opacity: 1;}
+  }
+
+  @keyframes fade-out {
+    from{scale: 1 ; opacity: 1;}
+    to{scale:0 ; opacity: 0;}
+  }
+
+  @keyframes opacity-to-0{
+    from{opacity: 1;}
+    to{opacity: 0;}
+  }
+
+  @keyframes opacity-to-1{
+    from{opacity: 0;}
+    to{opacity: 1;}
+  }
+
+  .card{
+    animation: fade-in linear;
+    animation-timeline: view();
+    animation-range-start: 0px;
+    animation-range-end: 30%;
+  }
+
+  header .note{
+    animation: opacity-to-0 linear;
+    animation-timeline: scroll();
+    animation-range-start: 0;
+    animation-range-end: 300px;
+    animation-fill-mode: both;
+
+  }
+
+  header .banner{
+    animation: fade-out linear;
+    animation-timeline: scroll();
+    animation-range-start: 0;
+    animation-range-end: 500px;
+    animation-fill-mode: both;
+  }
+
+  header{
+    animation: fade-out linear;
+    animation-timeline: scroll();
+    animation-range-start: 250px;
+    animation-range-end: 450px;
+    animation-fill-mode: both;
+  }
+
+.rightContent{
+    animation: opacity-to-1 ease;
+    animation-timeline: view();
+    animation-range-start: 0%;
+    animation-range-end: 40%;
+    animation-fill-mode: forwards;
+  }
