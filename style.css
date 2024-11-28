@@ -492,7 +492,13 @@ section .right_container{
   width: 40%;
 }
 
-
+.text-danger{
+  font-size: 14px;
+  font-weight: 600;
+  color: red;
+  margin-left: 12px;
+  
+}
 
 
 
@@ -664,13 +670,18 @@ section .right_container{
     color: #333;
   }
   header .banner .logo{
-    display: block;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 150px;
+    display: none;
   }
   header .logo a {
     color: #d7d7d7;
+  }
+  section .left_container{
+    display: none;
+  }
+  section .right_container{
+    width: 100%;
+  }
+  #before_footer{
+    margin-top: 80px;
   }
 }
